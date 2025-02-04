@@ -12,3 +12,6 @@ gitpod ALL=(postgres) NOPASSWD: /usr/bin/psql
 (Ctrl + X, then Y to confirm, and Enter)
 exit
 sudo -u postgres psql
+# role gitpod does not exit 
+CREATE ROLE gitpod WITH LOGIN PASSWORD 'yourpassword';
+ALTER ROLE gitpod CREATEDB;
